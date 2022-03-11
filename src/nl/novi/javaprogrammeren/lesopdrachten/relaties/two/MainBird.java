@@ -1,13 +1,11 @@
 package nl.novi.javaprogrammeren.lesopdrachten.relaties.two;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainBird {
 
     /*
-    Geef de klasse Bird de volgende instance variables: nickname, species, ringNumber
-    De species en ringNumber variables mogen na instantiatie niet meer aangepast worden.
-
-    Geef de klasse BirdOwner de volgende instance variables: name, sex.
-    Er zijn geen restricties op getters en setters.
 
     Programmeer de volgende relatie.
     Een BirdOwner kan een oneindig aantal vogels hebben. Elke vogel mag echter maar 1 keer in de lijst voorkomen.
@@ -25,7 +23,17 @@ public class MainBird {
 
     public static void main(String[] args) {
 
-    }
+        BirdOwner sjakie = new BirdOwner("Sjakie", "M");
+        Bird tweety = new Bird("Tweety", "Canari", 34234 );
+        Bird pietje = new Bird("Pietje", "M", 87987987);
+        List<Bird> birdList = new ArrayList<>();
+        birdList.add(tweety);
+        sjakie.setBirds(birdList);
+        System.out.println(sjakie.getBirds().get(0).getNickname());
+        sjakie.addBirdToList(pietje);
+        System.out.println(sjakie.getBirds().get(1).getNickname());
 
+
+    }
 
 }

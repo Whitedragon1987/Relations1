@@ -33,5 +33,11 @@ public class AnimalMain {
     Alles staat hier in het Nederlands beschreven. Schrijf je klassen-, variabele en methodenamen in het Engels.
 
      */
+    // superklasse pet aanmaken
+    // for in subclass
+
+    private int children;
+
+    private String pack;
 
 }
